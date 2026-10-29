@@ -1,11 +1,12 @@
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
+ROOT_DIR = Path(__file__).resolve().parent
 DATA_DIR = ROOT_DIR / "data"
 DATASET_PATH = DATA_DIR / "accidents.csv"
 MODEL_DIR = Path(__file__).resolve().parent / "models"
 MODEL_PATH = MODEL_DIR / "accident_severity_model.joblib"
 METRICS_PATH = MODEL_DIR / "model_metrics.json"
+
 
 SEVERITY_LABELS = {
     1: "Fatal",
