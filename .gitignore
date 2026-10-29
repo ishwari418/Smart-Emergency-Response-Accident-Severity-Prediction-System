@@ -17,3 +17,10 @@ frontend/dist/
 frontend/.env
 frontend/.env.local
 venv
+
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+
