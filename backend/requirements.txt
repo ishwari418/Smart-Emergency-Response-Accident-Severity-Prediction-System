@@ -6,3 +6,4 @@ pandas>=2.1
 scikit-learn>=1.4
 reportlab>=4.0
 gunicorn
+Flask-Cors

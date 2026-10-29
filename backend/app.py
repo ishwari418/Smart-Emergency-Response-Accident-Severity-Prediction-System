@@ -5,6 +5,7 @@ import json
 import os
 import shutil
 from datetime import datetime
+from flask_cors import CORS
 
 import joblib
 import pandas as pd
@@ -27,6 +28,12 @@ from config import (
 )
 
 app = Flask(__name__)
+CORS(
+    app,
+    resources={r"/api/*": {"origins": [
+        "https://smart-emergency-response-accident.onrender.com"
+    ]}}
+)
 app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024
 allowed_origins = os.environ.get(
     "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
@@ -139,10 +146,6 @@ def invalid_request(error):
 def file_too_large(_error):
     return jsonify({"error": "Upload is too large. Maximum CSV size is 10 MB."}), 413
 
-
-@app.get("/api/health")
-def health():
-    return jsonify({"status": "ok", "dataset_available": DATASET_PATH.exists(), "model_available": MODEL_PATH.exists()})
 
 
 @app.get("/api/dashboard")
