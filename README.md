@@ -1,5 +1,7 @@
 # Smart Emergency Response & Accident Severity Prediction System
 
+Live Link:- https://smart-emergency-response-accident.onrender.com/
+
 Roadwise is a local, educational road-accident analytics and severity classification prototype. It provides a React dashboard, interactive analytics, a single-record prediction form, CSV batch prediction, model evaluation, and downloadable reports.
 
 > **Important:** Accident records are generated synthetic data, not official historical records. Model scores and predictions are for coursework demonstration only. This application is not an emergency dispatch system, does not identify real emergencies, and cannot guarantee real-world accident outcomes.
