@@ -171,14 +171,9 @@ After starting the backend, check `http://127.0.0.1:5000/api/health`, then try t
 
 ## Screenshots
 
-Add genuine screenshots captured from the running local application here before submission, for example:
+![alt text](image.png)
 
-```text
-![Dashboard screenshot](docs/screenshots/dashboard.png)
-![Model evaluation screenshot](docs/screenshots/model-evaluation.png)
-```
-
-Do not use mock screenshots or present synthetic patterns as real observations.
+![alt text](image-1.png)
 
 ## College submission and viva notes
 
@@ -197,4 +192,3 @@ Deployment is optional; verify local operation first.
 - **Render backend:** create a Python web service with root directory `backend`, build command `pip install -r requirements.txt`, and start command `python app.py`. Set `CORS_ORIGINS` to the exact deployed frontend origin. The service needs writable persistent storage for generated data and model artifacts; if its filesystem is ephemeral, regenerate/retrain during deployment or use a persistent disk.
 - **Vercel frontend:** set the project root to `frontend`, build command `npm run build`, output directory `dist`, and environment variable `VITE_API_URL` to the deployed backend's `/api` URL. Add a Vercel rewrite for SPA routing if deep links are introduced.
 
-Do not add real credentials or paid service keys to this project.
