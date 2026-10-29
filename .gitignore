@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+backend/venv/
+backend/.venv/
+backend/models/*.joblib
+backend/models/model_metrics.json
+backend/models/*-backup-*
+
+# Generated synthetic data and backups
+data/accidents.csv
+data/accidents-backup-*.csv
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
